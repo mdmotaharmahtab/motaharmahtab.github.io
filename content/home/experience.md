@@ -32,10 +32,19 @@ experience:
     date_start: '2024-10-01'
     date_end: ''
     description: |2-
-      * Parallel background processing using Celery and Webhooks for
-      faster Table Extraction using GPT4o. 
-      * Pipeline enabling extraction of QSP clinical trial data from 
-      clnical papers and tables.
+      * Developed a Multi-Agent Data Extraction Pipeline for diverse files (PDF, DOCX, Code), outperforming general-purpose LLMs (Gemini 2.5 Pro, Claude Opus) by 15% on domain-specific extraction (e.g., dosing, covariates) and 10% on general extractions evaluated on 150 sources. Achieved 10% higher accuracy for large tables with >100 rows. [Demo](https://youtu.be/jnJo6u7b0mc?si=VbyaCR_pPT9hyC9u)
+      * Designed the pipeline to automatically identify multiple fields from user queries, generate structured table outputs, and ensure correct data typing.
+      * Engineered an advanced paper layout system that improved Retrieval-Augmented Generation (RAG) performance by 12%.
+      * Trained a YOLOv11-based subfigure model (Global Average IoU: 0.8919) to decompose composite figures and extract metadata (captions, legends), boosting visual information retrieval.
+      * Enhanced image and table data with section-level metadata, captions, footnotes, and summaries to enable advanced image-based search queries (e.g., “Find breast cancer papers that contain drug name on the x-axis and dosage amount on the y-axis”).
+      * Created a production-grade Qdrant vector database containing 40M paper PDFs for scalable research paper retrieval.
+      * Engineered a novel image Bounding Box (BBox) filtering algorithm that reduced false positives by 34% through a dynamic minimum BBox size heuristic integrated into NMS filtering.
+      * Collaborated with pharmaceutical scientists to build an automated QC system for data cleaning and validation (unit standardization, column normalization, biomarker validation, dosing range checks), improving data accuracy to 97%.
+      * Established scalable MLOps and secure deployment infrastructure for high-throughput inference services using Nvidia TensorRT and Triton Inference Server (TIS).
+      * Migrated long-running tasks to Celery with RabbitMQ (RMQ) for event-driven architecture and decoupled data transfer.
+      * Implemented event-driven autoscaling in Kubernetes (K8s) using KEDA to scale Celery worker pods dynamically based on RMQ queue length, ensuring stable throughput.
+      * Enforced Zero Trust Security architecture by isolating all cloud services into private networks and securing inter-service communication with VPC Endpoints and S2S tokens.
+
   - title: Jr. AI Engineer
     company: Giga Tech Ltd.
     company_url: 'https://gigatechltd.com/'
@@ -44,17 +53,15 @@ experience:
     date_start: '2022-09-01'
     date_end: '2024-10-01'
     description: |2-
-        *  Created new state-of-the-art systems for a plethora of Bangla NLP tasks e.g. Named Entity Recognition (NER), Parts of Speech (POS), Lemmatization, Question Answering, Coreference Resolution and Emotion recognition. Performed R&D on increasing performance beyond the current state-of-the-art to achieve 90% KPI on ML modules. Two such systems Bangla Lemmatization and Emotion recognition are publicly available at [https://github.com/eblict-gigatech/BanLemma](https://github.com/eblict-gigatech/BanLemma) and [https://sentiment.bangla.gov.bd](https://sentiment.bangla.gov.bd) respectively.
-        * Created GPT4o inference pipeline for Bangla NER and Coreference
-        Resolution systems using [ReAct](https://arxiv.org/abs/2210.03629) prompting method achieving comparable performance against finetuned systems.
-        * Created pipeline for Natural Language generation (NLG) in Bangla for both encoder models like BERT and auto-regressive models like GPT2. Analyzed and overcame common issues like repetitive text generation, and unmeaningful word generation in NLG for Bangla.
-        * The Question Answering (QA) module establishes new state-of-the-art results on Bangla datasets including  SQuAD-bn (translated from the SQuAD-2.0 and TyDI-QA English QA datasets) by a modified loss function to balance performance among null and non-null questions.
-        * The NER classification module establishes new state-of-the-art results on Bangla NER datasets by a hierarchical majority voting mechanism among external contexts retrieved from a Knowledge Base.
-        * Created data augmentation pipeline to handle the class imbalance problem in sequence tagging tasks. Formulated a general test set creation guidelines for unbiased classification performance calculation.
-        * Optimized deployment of LLMs using Optimum (for ONNX conversion) and Nvidia TensorRT(TRT) format for further optimization. Used PyTorch Profiler to identify inference bottlenecks. Used Nvidia Triton Inference Server (TIS) as the default ML inference server for concurrent request serving and scheduling, batch inference and response caching in MongoDB. Used Locust for load testing and pytorch profiler to reduce bottlenecks.
-        * Created REST APIs using FastAPI for hosting ML inference endpoints. Used MongoDB for response caching in NVIDIA Triton.
-        * Used Qdrant vector DB for fast semantic searching, Dask to analyze and query big dataframes, DVC for dataset versioning and MLflow for model, artifact and experiment versioning.
-        * Used Qdrant vector DB for fast semantic searching, Dask to analyze and query big dataframes, DVC for dataset versioning and MLflow for model, artifact and experiment versioning.
+      * Achieved SOTA in Low-Resource Bangla NLP (NER, POS, QA, Lemmatization), exceeding 90% KPI for all modules.
+      * Set new NER SOTA (81.85% Macro F1, +6% vs. prior SOTA, 90.49% Macro F1 on delivered dataset) and POS SOTA using a novel hierarchical voting mechanism among SLM predictions. [Demo](https://corpus.bangla.gov.bd/corpus/ml-model/tree-bank)
+      * Delivered SOTA for QA (SQuAD-bn) using a novel loss function to balance null/non-null answers, outperforming prior SOTA by 6%. [Demo](https://corpus.bangla.gov.bd/corpus/ml-model/question-answer)
+      * Co-developed and open-sourced the first production-grade Bangla Lemmatizer (96.36% accuracy) and Emotion Recognition system. [GitHub](https://github.com/eblict-gigatech/BanLemma), [Demo](https://sentiment.bangla.gov.bd)
+      * Engineered Advanced LLM Methodologies and Data Pipelines for complex generation and tagging tasks.
+      * Built GPT-4o inference pipelines (NER, Coref) using the [ReAct](https://arxiv.org/abs/2210.03629) prompting framework, matching fine-tuned model performance.
+      * Resolved severe class imbalance in sequence tagging using a sentence resampling pipeline and advanced loss functions (Dice, Focal, CurricularFace).
+      * Architected Core MLOps and Data Versioning Infrastructure to manage complete model and data lifecycles using DVC and MLflow.
+
 
   - title: Research Assistant
     company: Qatar Computing Research Institute

@@ -24,6 +24,20 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
+  - title: BanNERD
+    company: The 2025 Conference of the Nations of the Americas Chapter of ACL (NAACL); H-Index:218
+    company_url: 'https://2025.naacl.org/'
+    company_logo: naacl
+    location: New Mexico
+    date_start: '2025-05-01'
+    date_end: ''
+    description: |2-
+      * Developed BanNERCEM, a novel context-ensemble method achieving a state-of-the-art (SOTA) macro F1 score of 81.85% on Bangla NER, outperforming previous approaches.  
+      * Introduced BanNERD, the largest human-validated Bangla NER dataset (85k sentences, 0.88 IAA), which proved superior in cross-dataset evaluations.  
+      * Paper [BanNERD: Context-Driven Approach for Bangla Named Entity Recognition](https://aclanthology.org/2025.findings-naacl.380.pdf)  
+      * Code [https://github.com/eblict-gigatech/BanNERD](https://github.com/eblict-gigatech/BanNERD)
+
+
   - title: BanLemma
     company: The 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP); H-Index:176
     company_url: 'https://2023.emnlp.org/'
